@@ -1,10 +1,23 @@
+# Anotaciones sobre la entrega
+
+- La entrega contiene ficheros que pueden ser incompatibles con su máquina
+  (concretamente `__pycache__` y `.venv`). Se recomienda eliminarlos antes de
+  ejecutar el código, o bien utilizar el contenedor de Docker que se proporciona
+- Las variables de entorno deberían estar ya configuradas, tanto para el
+  `docker-compose` como para el entorno de desarrollo. En el caso del entorno de
+  desarrollo, será necesario proporcionar una base de datos MongoDB
+- El fichero `runme.sh` es un script para `zsh` utilizado para generar algunos
+  ficheros antes de empezar el proyecto. No se recomienda ejecutar
+
+---
+
 # Uso
 
 ## Ejecución de desarrollo
 
 ### Requisitos
 
-- Python 3.10 o superior
+- Python 3.11 o superior
 - Pip3
 
 ### Instrucciones
@@ -21,7 +34,7 @@ export mongo_url=<VALOR>
 export mongo_collection=<VALOR>
 export mongo_database=<VALOR>
 # Iniciar el servidor
-uvicorn --reload --port 8000 --host 127.0.0.0 src:app
+uvicorn --reload --port 8000 --host 127.0.0.1 src:app
 ```
 
 ## Ejecución mediante docker
@@ -30,10 +43,11 @@ uvicorn --reload --port 8000 --host 127.0.0.0 src:app
 # Compilar el contenedor
 docker build -t fastapi-app .
 # Inicializar el contenedor
-docker run fastapi-app -p 8080:8080 \
+docker run -p 8080:8080 \
     -e mongo_url=<VALOR> \
     -e mongo_collection=<VALOR> \
-    -e mongo_database=<VALOR>
+    -e mongo_database=<VALOR> \
+    fastapi-app
 ```
 
 ## Ejecución mediante Docker compose
