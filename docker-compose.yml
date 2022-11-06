@@ -1,13 +1,12 @@
 version: "3.1"
 services:
-  # mongodb://localhost:27017
-  # docker run -e MONGO_INITDB_DATABASE=TODO -p "27017:27017" mongo:6.0.2
+  # mongodb://iweb:strongpassword@localhost:27017
   mongodb:
     image: "mongo:6.0.2"
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: # TODO
-      MONGO_INITDB_ROOT_PASSWORD: # TODO
+      MONGO_INITDB_ROOT_USERNAME: iweb
+      MONGO_INITDB_ROOT_PASSWORD: strongpassword
       MONGO_INITDB_DATABASE: # TODO
     ports:
       - "27017:27017"
@@ -16,7 +15,7 @@ services:
   a2reservasrest:
     build: .
     environment:
-      mongo_url: "mongodb://root:example@mongodb:27017"
+      mongo_url: "mongodb://iweb:strongpassword@mongodb:27017"
       mongo_database: # TODO
       mongo_collection: # TODO
     ports:
