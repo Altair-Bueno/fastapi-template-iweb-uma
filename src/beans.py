@@ -1,3 +1,8 @@
+'''
+src/beans.py
+
+@author Altair Bueno <altair.bueno@uma.es>
+'''
 from fastapi import Depends
 from functools import lru_cache
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -28,5 +33,4 @@ def get_collection(
     database=Depends(get_mongo_database), settings: Settings = Depends(get_settings)
 ):
     return database[settings.mongo.collection]
-
 

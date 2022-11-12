@@ -1,3 +1,8 @@
+'''
+src/settings.py
+
+@author Altair Bueno <altair.bueno@uma.es>
+'''
 from pydantic import BaseModel, BaseSettings
 
 
@@ -17,3 +22,4 @@ class Settings(BaseSettings):
         env_file_encoding = "utf-8"
         env_nested_delimiter = "_"
         frozen = True
+
