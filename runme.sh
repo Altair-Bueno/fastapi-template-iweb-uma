@@ -39,6 +39,7 @@ $ART
 ## TODO LIST ##
 - Update Docker Compose with the required environment variables
 - Update .env with the required environment variables
+- Update iweb/iweb.py with the required variables
 
 Before doing anything:
 

@@ -8,6 +8,9 @@
   desarrollo, será necesario proporcionar una base de datos MongoDB
 - El fichero `runme.sh` es un script para `zsh` utilizado para generar algunos
   ficheros antes de empezar el proyecto. No se recomienda ejecutar
+- La carpeta `iweb` incluye un script de python para cargar los datos en la
+  instancia de mongo. Siga las instrucciones del fichero `iweb/README.md` sobre
+  como cargar dichos datos
 
 ---
 
