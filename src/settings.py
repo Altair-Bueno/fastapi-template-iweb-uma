@@ -3,11 +3,11 @@ src/settings.py
 
 @author Altair Bueno <altair.bueno@uma.es>
 '''
-from pydantic import BaseModel, BaseSettings
+from pydantic import BaseModel, BaseSettings, MongoDsn
 
 
 class MongoConfig(BaseModel):
-    url: str
+    url: MongoDsn
     collection: str
     database: str
 
