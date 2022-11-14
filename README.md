@@ -46,7 +46,7 @@ uvicorn --reload --port 8000 --host 127.0.0.1 src:app
 # Compilar el contenedor
 docker build -t fastapi-app .
 # Inicializar el contenedor
-docker run -p 8080:8080 \
+docker run -p 8000:8080 \
     -e mongo_url=<VALOR> \
     -e mongo_collection=<VALOR> \
     -e mongo_database=<VALOR> \
@@ -57,6 +57,8 @@ docker run -p 8080:8080 \
 
 ```sh
 # Iniciar el servicio completo
+# Disponible en http://localhost:8000
+# Mongo en mongodb://iweb:strongpassword@localhost:27017
 docker compose up -d
 # Detener el servicio
 docker compose down

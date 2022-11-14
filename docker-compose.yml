@@ -7,16 +7,16 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: iweb
       MONGO_INITDB_ROOT_PASSWORD: strongpassword
-      MONGO_INITDB_DATABASE: # TODO
+      MONGO_INITDB_DATABASE: iweb
     ports:
       - "27017:27017"
 
   # http://localhost:8000
-  a2reservasrest:
+  fastapi:
     build: .
     environment:
       mongo_url: "mongodb://iweb:strongpassword@mongodb:27017"
-      mongo_database: # TODO
+      mongo_database: iweb
       mongo_collection: # TODO
     ports:
       - "8000:8000"

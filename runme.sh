@@ -28,7 +28,7 @@ python3 -m pip install -r requirements.txt
 echo "Generating .env"
 echo "mongo_url=mongodb://iweb:strongpassword@localhost:27017
 mongo_collection=TODO
-mongo_database=TODO
+mongo_database=iweb
 " > .env
 
 echo "
