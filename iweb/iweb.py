@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 
 __MONGO_URL__ = 'mongodb://iweb:strongpassword@localhost:27017'
 __MONGO_DATABASE__ = 'iweb'
-__MONGO_COLLECTION__ = '' # TODO
+__MONGO_COLLECTION__ = 'TODO' # TODO
 
 __DATABASE_JSON__ = "houses.json"
 
