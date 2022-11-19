@@ -1,0 +1,13 @@
+[
+  {
+    "_id": {
+      "$oid": "6377d55a1c7235a80d593b51"
+    },
+    "origen": "321234",
+    "destino": "343532",
+    "texto": "Ta wapo el examen",
+    "timestamp": {
+      "$date": "2022-11-18T19:56:26.676Z"
+    }
+  }
+]

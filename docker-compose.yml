@@ -17,6 +17,7 @@ services:
     environment:
       mongo_url: "mongodb://iweb:strongpassword@mongodb:27017"
       mongo_database: iweb
-      mongo_collection: TODO # TODO
+      mongo_usuario: usuario
+      mongo_mensaje: mensaje
     ports:
       - "8000:8000"

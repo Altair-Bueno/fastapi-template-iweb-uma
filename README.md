@@ -1,4 +1,32 @@
-# Anotaciones sobre la entrega
+Servicio web FastAPI + Mongodb. Segundo parcial Ingeniería Web, Universidad de
+Málaga
+
+# Diseño de las entidades
+
+## Usuarios
+
+```json
+{
+  "telefono": "string",
+  "alias": "string",
+  "contactos": [{ "alias": "string", "telefono": "string" }]
+}
+```
+
+## Mensajes
+
+```json
+{
+  "_id": "ObjectId",
+  "timestamp": "datetime(format=ISO-8601)",
+  "origen": "string",
+  "destino": "string",
+  "destino": "string",
+  "texto": "string(max=400)"
+}
+```
+
+# Limitaciones sobre la solución propuesta
 
 - La entrega contiene ficheros que pueden ser incompatibles con su máquina
   (concretamente `__pycache__` y `.venv`). Se recomienda eliminarlos antes de
@@ -8,13 +36,10 @@
   desarrollo, será necesario proporcionar una base de datos MongoDB
 - El fichero `runme.sh` es un script para `zsh` utilizado para generar algunos
   ficheros antes de empezar el proyecto. No se recomienda ejecutar
-- La carpeta `iweb` incluye un script de python para cargar los datos en la
-  instancia de mongo. Siga las instrucciones del fichero `iweb/README.md` sobre
-  como cargar dichos datos
+- La carpeta `iweb` contiene una copia local de las entidades de mongo listas
+  para ser cargadas
 
----
-
-# Uso
+# Instrucciones de despliegue y uso
 
 ## Ejecución de desarrollo
 
@@ -69,11 +94,12 @@ docker compose down
 La aplicación admite las siguientes opciones de configuración mediante ficheros
 `.env` o variables de entorno
 
-| Variable           | Descripción                             | Valor por defecto |
-| ------------------ | --------------------------------------- | ----------------- |
-| `mongo_url`        | URL de un servidor Mongodb              |                   |
-| `mongo_collection` | Colección donde almacenar los datos     |                   |
-| `mongo_database`   | Base de datos donde buscar la colección |                   |
+| Variable         | Descripción                                            | Valor por defecto |
+| ---------------- | ------------------------------------------------------ | ----------------- |
+| `mongo_url`      | URL de un servidor Mongodb                             |                   |
+| `mongo_usuario`  | Colección donde almacenar los datos sobre los usuarios |                   |
+| `mongo_mensaje`  | Colección donde almacenar los datos sobre los mensajes |                   |
+| `mongo_database` | Base de datos donde buscar la colección                |                   |
 
 # Documentación
 

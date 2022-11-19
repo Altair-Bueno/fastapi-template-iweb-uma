@@ -8,7 +8,8 @@ from pydantic import BaseModel, BaseSettings, MongoDsn
 
 class MongoConfig(BaseModel):
     url: MongoDsn
-    collection: str
+    usuario: str
+    mensaje: str
     database: str
 
     class Config:

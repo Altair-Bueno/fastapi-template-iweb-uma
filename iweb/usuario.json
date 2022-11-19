@@ -1,0 +1,36 @@
+[
+  {
+    "_id": {
+      "$oid": "6377d14667bba3cc01c022d1"
+    },
+    "telefono": "12345",
+    "alias": "carlos",
+    "contactos": []
+  },
+  {
+    "_id": {
+      "$oid": "6377d14667bba3cc01c022d2"
+    },
+    "telefono": "321234",
+    "alias": "pepe",
+    "contactos": [
+      {
+        "alias": "manolo",
+        "telefono": "343532"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6377d14667bba3cc01c022d3"
+    },
+    "telefono": "343532",
+    "alias": "manolo",
+    "contactos": [
+      {
+        "alias": "pepe",
+        "telefono": "321234"
+      }
+    ]
+  }
+]
