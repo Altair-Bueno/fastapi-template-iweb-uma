@@ -1,3 +1,8 @@
+Disclaimer: URL, passwords and other sensible data committed to this project no
+longer exist
+
+---
+
 # Anotaciones sobre la entrega
 
 - La entrega contiene ficheros que pueden ser incompatibles con su máquina
